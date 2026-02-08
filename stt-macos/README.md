@@ -80,7 +80,7 @@ HOTKEY = keyboard.Key.shift_l  # Left Shift
 HOTKEY = keyboard.Key.caps_lock  # Caps Lock
 ```
 
-**Tip**: Right Shift is convenient because it's easy to reach and rarely used alone. If you need Right Shift for typing, consider using Caps Lock or F13-F19 keys instead.
+**Tip**: Right Shift is convenient because it's easy to reach and rarely used alone. If you need Right Shift for typing, consider using Caps Lock instead.
 
 ## Language Configuration
 
@@ -163,7 +163,6 @@ To run automatically on login, create a LaunchAgent:
 
 ### Hotkey not working
 - Ensure Accessibility permissions are granted
-- Try a different key (F14, F15, etc.)
 - Check if another app is using the same hotkey
 
 ## Files

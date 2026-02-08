@@ -28,7 +28,6 @@ LANGUAGE = "en"  # Default: English
 
 # Hotkey configuration - Change this to your preferred key
 # Options: keyboard.Key.shift_r (right Shift), keyboard.Key.shift_l (left Shift)
-# Or: keyboard.Key.f13, keyboard.Key.f14, keyboard.Key.caps_lock, etc.
 HOTKEY = keyboard.Key.shift_r
 
 # State
