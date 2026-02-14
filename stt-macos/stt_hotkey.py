@@ -24,7 +24,7 @@ CONVERTED_AUDIO = "/tmp/voice_16k.wav"
 # Language Configuration
 # Set to specific language code or "auto" for auto-detection
 # Top languages: en, es, fr, de, it, pt, zh, ja, ru, hr (Croatian)
-LANGUAGE = "hr"  # Default: English
+LANGUAGE = "en"  # Default: English
 
 # Hotkey configuration - Change this to your preferred key
 # Options: keyboard.Key.shift_r (right Shift), keyboard.Key.shift_l (left Shift)
