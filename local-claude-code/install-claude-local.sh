@@ -11,7 +11,7 @@ clear
 # 64K Context = 65536
 # 32K Context = 32768
 # 25K Context = 25600
-MODEL="${1:-qwen3-coder:latest}"
+MODEL="${1:-qwen3-coder-next}"
 CONTEXT_WINDOW='25600'
 K_WINDOW=$(( CONTEXT_WINDOW / 1024 ))
 CUSTOM_MODEL_NAME="${MODEL//:/-}-${K_WINDOW}k"

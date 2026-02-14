@@ -11,19 +11,15 @@ if [[ -z "$TMUX" && -n "$PS1" ]]; then
     tmux attach-session -t default 2>/dev/null || tmux new-session -s default
 fi
 
-## Tmux config (~/.tmux.conf)
+## Tmux config
 
 ```bash
+cat >> ~/.tmux.conf << 'EOF'
 set-hook -g after-split-window 'select-layout even-horizontal'
 set-hook -g after-kill-pane 'select-layout even-horizontal'
 set -g pane-active-border-style "fg=#8B0000"
 set -g pane-border-style "fg=#444444"
-```
-
-Reload:
-
-```bash
-tmux source-file ~/.tmux.conf
+EOF
 ```
 
 ## Claude Code config (~/.claude/settings.json)
