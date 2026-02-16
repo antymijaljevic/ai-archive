@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/mcp.json",
+  "mcpServers": {
+    "github": {
+      "transport": "http",
+      "url": "https://mcp.github.com",
+      "description": "GitHub integration for issues, PRs, and repository management",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      }
+    },
+    "postgres": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      },
+      "description": "PostgreSQL database access"
+    },
+    "filesystem": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"],
+      "description": "Extended filesystem access"
+    }
+  },
+
+  "_comments": {
+    "note": "This file is for project-scoped MCP servers (shared with team)",
+    "installation": "Run: claude mcp add --scope project ...",
+    "environmentVariables": "Use ${VAR_NAME} to reference environment variables",
+    "availableServers": [
+      "GitHub - https://mcp.github.com",
+      "Sentry - https://mcp.sentry.dev/mcp",
+      "Postgres - @modelcontextprotocol/server-postgres",
+      "MongoDB - @modelcontextprotocol/server-mongodb",
+      "Slack - @modelcontextprotocol/server-slack",
+      "Figma - @modelcontextprotocol/server-figma",
+      "See more: https://github.com/modelcontextprotocol/servers"
+    ],
+    "authentication": "For OAuth servers, run /mcp in Claude Code to authenticate"
+  }
+}
